@@ -23,9 +23,9 @@ const SidebarLabel = styled.span`
   margin-left: 16px;
 `;
 
-const SidebarDescription = styled.span`
+const SidebarDescription = styled.address`
   margin-left: 11px;
-`
+`;
 
 
 const DropdownLink = styled(Link)`

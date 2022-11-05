@@ -12,6 +12,10 @@ import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons/lib';
 
 
+
+
+
+
 const Nav = styled.div`
     background: #15171c;
     height: 80px;
@@ -45,6 +49,9 @@ const SidebarNav = styled.nav`
 const SidebarWrap = styled.div`
     width: 100%;
 `;
+
+
+
 
 /*
 const Sidebar = () => {
@@ -93,7 +100,7 @@ const Sidebar = () => {
                         })}
                     </SidebarWrap>
                 </SidebarNav>
-            </IconContext.Provider>
+            </IconContext.Provider>    
         </>
     );
 };
