@@ -1,39 +1,26 @@
-import React, { useState } from 'react';
-import './App.css';
-import { BrowserRouter as Router, Swithc, Route } from 'react-router-dom'
-import { week } from './util'
+import React from 'react';
+import { BrowserRouter as Router} from 'react-router-dom'
 import CalendarHeader from './components/CalendarHeader';
-import Sidebar from './components/Sidebar';
-import Month from './components/Month';
-
+import Weekview from './components/weekview';
+import Side from './components/side';
 
 
 function App() {
-  const [currenMonth, setCurrenMonth] = useState(week)
   return (
     <Router>
-      <Sidebar />
-     { /*<img src={horario} alt="Italian Trulli"></img> */}
-     <div className="h-screen flex flex-columns">
-        <CalendarHeader />
-        <div className="flex flex-1">
-          <Month month={currenMonth}/>
-      </div>
-     </div>
-     {/*
-      <div className="h-screen flex flex-columns">
+      <div className='flex flex-columns'>
+        <Side />
+        <div className="flex flex-columns">
           <CalendarHeader />
-          <div className="flex flex-1">
-              <Month month={getMonth}/>
+          <div className='py-10 px-20 flex flex-1'>
+            <Weekview/>
           </div>
-      </div>
-     */}
-
+          
+        </div>
+        
+     </div>
     </Router>
-
-
-    
-  );
+  )
 }
 
 export default App;
