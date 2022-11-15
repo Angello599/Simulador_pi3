@@ -3,12 +3,14 @@ import { BrowserRouter as Router} from 'react-router-dom'
 import CalendarHeader from './components/CalendarHeader';
 import Side from './components/side';
 import Dashboard from "./Dashboard";
+import Sidebar from "./components/Activities"
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <Router>
       <div className='flex flex-columns'>
-        <Side />
+        <Sidebar />
         <div className="flex flex-columns">
           <CalendarHeader />
           <div className=' px-20 flex flex-1'>
