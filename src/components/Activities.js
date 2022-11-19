@@ -1,24 +1,32 @@
 import React, { useState } from "react";
 import { Collapse } from "react-bootstrap";
 import Formulario from './Formulario';
+import Formulario_uwu from './Formulario_uwu';
 import Popup from './Popup';
 
 
 function Activities() {
+    const [tittle, setTittle] = useState("");
     const [visible, setVisible] = useState(false);
     const [visible2, setVisible2] = useState(false);
 
     const [openPopup, setOpenPopup] = useState(false);
 
+
+
     return (
         <>
             <>
                 <Popup
-                    tittle = "C1 Form"
+                    tittle = "Form"
                     openPopup = {openPopup}
                     setOpenPopup = {setOpenPopup}
                 >
-                    <Formulario />
+                    <Formulario_uwu 
+                    tittle={tittle}
+                    openPopup={openPopup}
+                    setOpenPopup={false}
+                    onSubmit = {() => setOpenPopup(false)}/>
                 </Popup>
             </>
             <div className="col-md-2">
@@ -62,16 +70,16 @@ function Activities() {
 
                 <Collapse in={visible}>
                     <div id="cursos">
-                        <button type="button" class="btn btn-outline-secondary w-100" onClick={() => setOpenPopup(true)}>
+                        <button type="button" class="btn btn-outline-secondary w-100" onClick={() =>{ setOpenPopup(true); setTittle("c1")}}>
                             c1
                         </button>
-                        <button type="button" class="btn btn-outline-secondary w-100">
+                        <button type="button" class="btn btn-outline-secondary w-100" onClick={() =>{ setOpenPopup(true); setTittle("c2")}}>
                             c2
                         </button>
-                        <button type="button" class="btn btn-outline-secondary w-100">
+                        <button type="button" class="btn btn-outline-secondary w-100" onClick={() =>{ setOpenPopup(true); setTittle("c3")}}>
                             c3
                         </button>
-                        <button type="button" class="btn btn-outline-secondary w-100">
+                        <button type="button" class="btn btn-outline-secondary w-100" onClick={() =>{ setOpenPopup(true); setTittle("c4")}}>
                             c4
                         </button>
                     </div>
@@ -90,16 +98,16 @@ function Activities() {
 
                 <Collapse in={visible2}>
                     <div id="vida">
-                        <button type="button" class="btn btn-outline-secondary w-100">
+                        <button type="button" class="btn btn-outline-secondary w-100" onClick={() =>{ setOpenPopup(true); setTittle("Familia")}}>
                             Familia
                         </button>
-                        <button type="button" class="btn btn-outline-secondary w-100">
+                        <button type="button" class="btn btn-outline-secondary w-100" onClick={() =>{ setOpenPopup(true); setTittle("Sueño")}}>
                             Sueño
                         </button>
-                        <button type="button" class="btn btn-outline-secondary w-100">
+                        <button type="button" class="btn btn-outline-secondary w-100" onClick={() =>{ setOpenPopup(true); setTittle("Comida")}}>
                             Comida
                         </button>
-                        <button type="button" class="btn btn-outline-secondary w-100">
+                        <button type="button" class="btn btn-outline-secondary w-100" onClick={() =>{ setOpenPopup(true); setTittle("Ocio")}}>
                             Ocio
                         </button>
                     </div>

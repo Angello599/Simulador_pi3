@@ -5,6 +5,7 @@ import Side from './components/side';
 import Dashboard from "./Dashboard";
 import Sidebar from "./components/Activities"
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import "../node_modules/react-datetime/css/react-datetime.css";
 
 function App() {
   return (
