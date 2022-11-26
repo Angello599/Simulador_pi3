@@ -12,6 +12,10 @@ function Activities() {
 
     const [openPopup, setOpenPopup] = useState(false);
 
+    const sbmt = () => {
+        setOpenPopup(false);
+    }
+
 
 
     return (
@@ -24,9 +28,8 @@ function Activities() {
                 >
                     <Formulario_uwu 
                     tittle={tittle}
-                    openPopup={openPopup}
-                    setOpenPopup={false}
-                    onSubmit = {() => setOpenPopup(false)}/>
+                    sbmt={sbmt}
+                    />
                 </Popup>
             </>
             <div className="col-md-2">
