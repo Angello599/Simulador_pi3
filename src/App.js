@@ -4,6 +4,7 @@ import CalendarHeader from './components/CalendarHeader';
 import Side from './components/side';
 import Dashboard from "./Dashboard";
 import Sidebar from "./components/Activities"
+import Results from "./components/Results"
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "../node_modules/react-datetime/css/react-datetime.css";
 
@@ -18,6 +19,7 @@ function App() {
             <Dashboard/>
           </div>
         </div>
+        <Results />
      </div>
     </Router>
   )

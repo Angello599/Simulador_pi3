@@ -15,6 +15,7 @@ class Formulario_uwu extends React.Component {
             startDate: "",
             endDate: "",
             tittle: "",
+            id: 0
         };
 
         const { sbmt } = this.props;
@@ -42,10 +43,11 @@ class Formulario_uwu extends React.Component {
 
     changeStartDate = (event) => {
         console.log(event._d);
-        console.log(event.format("DD/MM/YYYY HH:mm"));
-        console.log(event.format("YYYY-MM-DDTHH:mm:ss.sssZ"));
+        //console.log(event.format("DD/MM/YYYY HH:mm"));
+        //console.log(event.format("YYYY-MM-DDTHH:mm:ss.sssZ"));
         this.setState({startDate: event});
         this.setState({tittle: this.props.tittle})
+        this.setState({id: this.props.id})
     }
 
     changeEndDate = (event) => {
@@ -72,11 +74,12 @@ class Formulario_uwu extends React.Component {
         console.log(this.state.startDate.format("YYYY-MM-DDTHH:mm:ss.sssZ"));
         //console.log(this.props.endDate);
         console.log(this.state.endDate.format("YYYY-MM-DDTHH:mm:ss.sssZ"));
+        console.log(this.state.id);
         appointments.push({
             title: this.state.tittle,
             startDate: new Date(this.state.startDate.format("YYYY-MM-DDTHH:mm:ss.sssZ")),
             endDate: new Date(this.state.endDate.format("YYYY-MM-DDTHH:mm:ss.sssZ")),
-            id: 1,
+            id: this.state.id,
             location: "",
         })
 
@@ -116,6 +119,7 @@ class Formulario_uwu extends React.Component {
                     Fecha de inicio
                 </div>
                 <Datetime   id="inputFechaInicio"
+                            dateFormat="DD/MM/YYYY"
                             value={this.state.startDate}
                             onChange={this.changeStartDate}/>
                 <div>

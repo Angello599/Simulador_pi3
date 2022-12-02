@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Collapse } from "react-bootstrap";
+import ToggleButton from 'react-bootstrap/ToggleButton';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Formulario from './Formulario';
 import Formulario_uwu from './Formulario_uwu';
 import Popup from './Popup';
@@ -9,12 +11,17 @@ function Activities() {
     const [tittle, setTittle] = useState("");
     const [visible, setVisible] = useState(false);
     const [visible2, setVisible2] = useState(false);
+    let [idd, setIdd] = useState(0);
 
     const [openPopup, setOpenPopup] = useState(false);
+    const [checked, setChecked] = useState(false);
+    const [checked2, setChecked2] = useState(false);
 
     const sbmt = () => {
         setOpenPopup(false);
+        setIdd(idd+1);
     }
+
 
 
 
@@ -28,6 +35,7 @@ function Activities() {
                 >
                     <Formulario_uwu 
                     tittle={tittle}
+                    id={idd}
                     sbmt={sbmt}
                     />
                 </Popup>
@@ -60,57 +68,95 @@ function Activities() {
                     */}
                 
 
-
-                <button
-                    onClick={() => setVisible(!visible)}
-                    class="btn btn-secondary w-100" 
+{/*
+    <button
+        onClick={() => setVisible(!visible)}
+        class="btn btn-primary w-100" 
+        aria-controls="cursos"
+        data-target="#cursos"
+        aria-expanded="false"
+    >
+        Cursos
+    </button>
+ */}
+                
+                <ButtonGroup className="mb-2 w-100">
+                <ToggleButton
+                    
+                    id="toggle-check"
+                    type="checkbox"
+                    variant="outline-primary"
+                    checked={checked}
+                    value="1"
+                    onChange={(e) => setChecked(e.currentTarget.checked)}
                     aria-controls="cursos"
                     data-target="#cursos"
                     aria-expanded="false"
+                    onClick={() => setVisible(!visible)}
                 >
                     Cursos
-                </button>
-
+                </ToggleButton>
+                </ButtonGroup>
                 <Collapse in={visible}>
                     <div id="cursos">
-                        <button type="button" class="btn btn-outline-secondary w-100" onClick={() =>{ setOpenPopup(true); setTittle("c1")}}>
-                            c1
+                        <button type="button" class="btn btn-outline-primary w-100" onClick={() =>{ setOpenPopup(true); setTittle("Ciencias")}}>
+                            Ciencias
                         </button>
-                        <button type="button" class="btn btn-outline-secondary w-100" onClick={() =>{ setOpenPopup(true); setTittle("c2")}}>
-                            c2
+                        <button type="button" class="btn btn-outline-primary w-100" onClick={() =>{ setOpenPopup(true); setTittle("Humanidades")}}>
+                            Humanidades
                         </button>
-                        <button type="button" class="btn btn-outline-secondary w-100" onClick={() =>{ setOpenPopup(true); setTittle("c3")}}>
-                            c3
+                        <button type="button" class="btn btn-outline-primary w-100" onClick={() =>{ setOpenPopup(true); setTittle("Interdisciplinario")}}>
+                            Interdisciplinario
                         </button>
-                        <button type="button" class="btn btn-outline-secondary w-100" onClick={() =>{ setOpenPopup(true); setTittle("c4")}}>
-                            c4
+                        <button type="button" class="btn btn-outline-primary w-100" onClick={() =>{ setOpenPopup(true); setTittle("Carrera")}}>
+                            Carrera
                         </button>
                     </div>
                 </Collapse>
-
-
-                <button
-                    onClick={() => setVisible2(!visible2)}
-                    class="btn btn-secondary w-100" 
+                
+                <br></br>
+{/*
+    <button
+        onClick={() => setVisible2(!visible2)}
+        class="btn btn-primary w-100" 
+        aria-controls="vida"
+        data-target="#vida"
+        aria-expanded="false"
+    >
+        Vida
+    </button>
+*/}
+                <ButtonGroup className="mb-2 w-100">
+                <ToggleButton
+                    
+                    id="toggle-check2"
+                    type="checkbox"
+                    variant="outline-primary"
+                    checked={checked2}
+                    value="2"
+                    onChange={(e) => setChecked2(e.currentTarget.checked)}
                     aria-controls="vida"
                     data-target="#vida"
                     aria-expanded="false"
+                    onClick={() => setVisible2(!visible2)}
                 >
                     Vida
-                </button>
+                </ToggleButton>
+                </ButtonGroup>
+                
 
                 <Collapse in={visible2}>
                     <div id="vida">
-                        <button type="button" class="btn btn-outline-secondary w-100" onClick={() =>{ setOpenPopup(true); setTittle("Familia")}}>
+                        <button type="button" class="btn btn-outline-primary w-100" onClick={() =>{ setOpenPopup(true); setTittle("Familia")}}>
                             Familia
                         </button>
-                        <button type="button" class="btn btn-outline-secondary w-100" onClick={() =>{ setOpenPopup(true); setTittle("Sueño")}}>
+                        <button type="button" class="btn btn-outline-primary w-100" onClick={() =>{ setOpenPopup(true); setTittle("Sueño")}}>
                             Sueño
                         </button>
-                        <button type="button" class="btn btn-outline-secondary w-100" onClick={() =>{ setOpenPopup(true); setTittle("Comida")}}>
+                        <button type="button" class="btn btn-outline-primary w-100" onClick={() =>{ setOpenPopup(true); setTittle("Comida")}}>
                             Comida
                         </button>
-                        <button type="button" class="btn btn-outline-secondary w-100" onClick={() =>{ setOpenPopup(true); setTittle("Ocio")}}>
+                        <button type="button" class="btn btn-outline-primary w-100" onClick={() =>{ setOpenPopup(true); setTittle("Ocio")}}>
                             Ocio
                         </button>
                     </div>

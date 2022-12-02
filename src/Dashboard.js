@@ -202,11 +202,12 @@ class AppointmentFormContainerBasic extends React.PureComponent {
       cancelAppointment();
     };
 
+
+    // fullsize
     return (
       <AppointmentForm.Overlay
         visible={visible}
         target={target}
-        fullSize
         onHide={onHide}
       >
         <StyledDiv>
@@ -294,15 +295,15 @@ export default class Dashboard extends React.PureComponent {
     super(props);
     this.state = {
       data: appointments,
-      currentDate: '2018-06-27',
+      currentDate: '2022-12-27',
       confirmationVisible: false,
       editingFormVisible: false,
       deletedAppointmentId: undefined,
       editingAppointment: undefined,
       previousAppointment: undefined,
       addedAppointment: {},
-      startDayHour: 9,
-      endDayHour: 19,
+      startDayHour: 8,
+      endDayHour: 20,
       isNewAppointment: false,
     };
 
