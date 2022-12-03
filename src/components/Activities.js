@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Collapse } from "react-bootstrap";
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import Formulario from './Formulario';
 import Formulario_uwu from './Formulario_uwu';
 import Popup from './Popup';
 
@@ -44,41 +43,6 @@ function Activities() {
                 <h4 className="mt-3 mb-5 fw-bold text-center">
                     Simulador
                 </h4>
-                    {/*
-                        <button name="button" className="btn btn-primary btn-lg" onClick={() => setVisible(!visible)}>
-                            Cursos 
-                        </button>
-
-                        {visible &&
-                            <>
-                                <div>
-                                    c1
-                                </div>
-                                <div>
-                                    c2
-                                </div>
-                                <div>
-                                    c3
-                                </div>
-                                <div>
-                                    c4
-                                </div>
-                            </>
-                        }
-                    */}
-                
-
-{/*
-    <button
-        onClick={() => setVisible(!visible)}
-        class="btn btn-primary w-100" 
-        aria-controls="cursos"
-        data-target="#cursos"
-        aria-expanded="false"
-    >
-        Cursos
-    </button>
- */}
                 
                 <ButtonGroup className="mb-2 w-100">
                 <ToggleButton
@@ -115,17 +79,7 @@ function Activities() {
                 </Collapse>
                 
                 <br></br>
-{/*
-    <button
-        onClick={() => setVisible2(!visible2)}
-        class="btn btn-primary w-100" 
-        aria-controls="vida"
-        data-target="#vida"
-        aria-expanded="false"
-    >
-        Vida
-    </button>
-*/}
+
                 <ButtonGroup className="mb-2 w-100">
                 <ToggleButton
                     
