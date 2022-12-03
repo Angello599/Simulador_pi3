@@ -141,7 +141,7 @@ function Results() {
         }
     
         if (horas_familia > 8) {
-            setFamiliaStar(5)
+            setFamiliaStar(0)
         } else if (horas_familia > 6) {
             setFamiliaStar(4)
         } else if (horas_familia > 4) {
@@ -153,6 +153,9 @@ function Results() {
         } else {
             setFamiliaStar(0)
         }
+
+
+        
     
 
     
