@@ -10,14 +10,16 @@ import "../node_modules/react-datetime/css/react-datetime.css";
 function App() {
   return (
     <Router>
-      <div className='flex flex-columns'>
+      <div className='flex flex-columns flex-nowrap'>
         <Sidebar />
-        <div className="flex flex-columns">
+        <div className="px-10 flex flex-columns">
           <CalendarHeader />
-          <div className=' px-2 flex flex-1'>
+          <div className='px-20 flex flex-1' >
             <Dashboard/>
           </div>
+          
             <Results />
+            
         </div>
       </div>
       
