@@ -295,15 +295,15 @@ export default class Dashboard extends React.PureComponent {
     super(props);
     this.state = {
       data: appointments,
-      currentDate: '2022-12-27',
+      currentDate: '2022-12-25',
       confirmationVisible: false,
       editingFormVisible: false,
       deletedAppointmentId: undefined,
       editingAppointment: undefined,
       previousAppointment: undefined,
       addedAppointment: {},
-      startDayHour: 8,
-      endDayHour: 20,
+      startDayHour: 0,
+      endDayHour: 24,
       isNewAppointment: false,
     };
 

@@ -14,12 +14,16 @@ function App() {
         <Sidebar />
         <div className="flex flex-columns">
           <CalendarHeader />
-          <div className=' px-20 flex flex-1'>
+          <div className=' px-2 flex flex-1'>
             <Dashboard/>
           </div>
+            <Results />
         </div>
-        <Results />
-     </div>
+      </div>
+      
+      
+      
+        
     </Router>
   )
 }
